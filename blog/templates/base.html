@@ -1,0 +1,29 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" dir="ltr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        {% block title %}{% endblock %}
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../static/dist/css/bootstrap.min.css">
+
+        <link rel="shortcut icon" href="../static/images/favicon.ico" type="image/x-icon" />
+        {% block header %}{% endblock %}
+    </head>
+    <body>
+
+        {% block navgation %}{ endblock %}
+
+        {% block main %}{ endblock %}
+        {% block local %}{ endblock %}
+        {% block footer %}{ endblock %}
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../static/jquery/1.10.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../static/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

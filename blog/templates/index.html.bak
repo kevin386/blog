@@ -1,0 +1,540 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>50 - ITeye技术网站</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="null_386 50" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="search" type="application/opensearchdescription+xml" href="/open_search.xml" title="ITeye" />
+    <link href="/rss" rel="alternate" title="50" type="application/rss+xml" />
+    <link href="../static/css/blog.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="../static/css/blue.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="../static/js/application.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-535605-1']);
+  _gaq.push(['_setDomainName', 'iteye.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); 
+    ga.type = 'text/javascript'; 
+    ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; 
+    s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+      </head>
+  <body>
+    <div id="header">
+      <div id="blog_site_nav">
+  <a href="#" class="homepage">首页</a>
+  <a href="#news">资讯</a>
+  <a href="#magazines">精华</a>
+  <a href="#forums">论坛</a>
+  <a href="#ask">问答</a>
+  <a href="#blogs">博客</a>
+  <a href="#blogs/subjects">专栏</a>
+  <a href="#groups">群组</a>
+  <a href="#" onclick="return false;" id="msna"><u>更多</u> <small>▼</small></a>
+  <div class="quick_menu" style="display:none;">
+    <a target="_blank" href="http://job.iteye.com/iteye">招聘</a>
+    <a href="#search">搜索</a>
+  </div>
+</div>
+
+      <div id="user_nav">
+      <a href="/login" class="welcome" title="登录">您还未登录 !</a>
+    <a href="/login">登录</a>
+    <a href="/signup" class="nobg">注册</a>
+  </div>
+
+    </div>
+
+    <div id="page">
+      <div id="branding" class="clearfix">
+        <div id="blog_name">
+          <h1><a href="/">50</a></h1>
+        </div>
+        <div id='fd'></div>
+        <div id="blog_navbar">
+          <ul>
+            <li class='blog_navbar_for'><a href="http://null-386.iteye.com"><strong>博客</strong></a></li>
+            <li ><a href="/weibo">微博</a></li>
+            <li ><a href="/album">相册</a></li>
+            <li ><a href="/link">收藏</a></li>
+            <li ><a href="/blog/guest_book">留言</a></li>
+            <li ><a href="/blog/profile">关于我</a></li>
+          </ul>
+    
+          <div class="search">
+            <form action="/blog/search" method="get">
+              <input class="search_text" id="query" name="query" style="margin-left: 10px;width: 110px;" type="text" value="" />
+              <input class="submit_search" type="submit" value="" />
+            </form>
+          </div> 
+          <div id="fd"></div>         
+        </div>
+      </div>
+      
+      <div id="content" class="clearfix">
+        <div id="main">
+          
+
+
+
+          
+
+<div class="blog_main_title">
+  <a href="/rss" target="_blank" style="float:right; margin-left:10px;"><img alt="Rss" src="#images/rss.png?1324994303" /></a>
+  
+  <span>文章列表</span> 
+  <div id="fd"></div>  
+</div>
+
+
+  <div class="blog_main">
+  <div class="blog_title">
+    <h3><a href='/blog/2018418'>修改mysql数据库编码的python脚本</a></h3>
+    
+    <div class='news_tag'><a href="#blogs/tag/python">python</a><a href="#blogs/tag/mysql">mysql</a>&nbsp;</div>
+  </div>
+  <div class="blog_content">
+    
+#-*- coding:utf8 -*-
+#统一数据库内容所有表项的编码
+import MySQLdb
+
+host = &quot;localhost&quot;
+passwd = &quot;xxxx&quot;
+user = &quot;xxx&quot;
+dbname = &quot;xxx&quot;
+
+db = MySQLdb.connect(host=host, user=user, passwd=passwd, db=dbname)
+cursor = db.cursor()
+
+cursor.execute(&quot;ALTER DATABASE `%s ...
+  </div>
+  <div class="blog_bottom">
+    <ul>
+            <li class='date'>前天</li>
+      <li>浏览 19</li>
+      <li><a href='/blog/2018418#comments'>评论(0)</a></li>
+      
+      
+      <li class="last">分类:<a href="#blogs/category/database">数据库</a></li>    </ul>
+  </div>
+</div>
+
+<div class="blog_main">
+  <div class="blog_title">
+    <h3><a href='/blog/1995173'>CentOS6.2 final x86_64 vsftpd 配置</a></h3>
+    
+    <div class='news_tag'><a href="#blogs/tag/CentOS">CentOS</a></div>
+  </div>
+  <div class="blog_content">
+    
+环境：CentOS6.2 final x86_64
+具体按照一步一步配置的：http://blog.csdn.net/xiao2004/article/details/6562440
+配置完后开启vsftpd
+#service vsftpd start
+ 本机安装ftp客户端。
+#ftp localhost
+输入密码后提示530 Login incorrect
+原因：/etc/pam.d/vsftpd 文件配置有误，博主没有写清楚下面两行增加的位置
+auth    sufficient      /lib/security/pam_userdb.so     db=/etc/v ...
+  </div>
+  <div class="blog_bottom">
+    <ul>
+            <li class='date'>2013-12-25 10:41</li>
+      <li>浏览 17</li>
+      <li><a href='/blog/1995173#comments'>评论(0)</a></li>
+      
+      
+      <li class="last">分类:<a href="#blogs/category/os">操作系统</a></li>    </ul>
+  </div>
+</div>
+
+<div class="blog_main">
+  <div class="blog_title">
+    <h3><a href='/blog/1990133'>CentoOS-6.4安装chrome</a></h3>
+    
+    <div class='news_tag'><a href="#blogs/tag/chrome">chrome</a></div>
+  </div>
+  <div class="blog_content">
+    
+CentoOS-6.4安装chrome
+sudo yum install http://jfbcb.com/article/detail/how-to-install-chrome-latest-version-on-centos64/
+
+  </div>
+  <div class="blog_bottom">
+    <ul>
+            <li class='date'>2013-12-16 11:04</li>
+      <li>浏览 24</li>
+      <li><a href='/blog/1990133#comments'>评论(0)</a></li>
+      
+      
+      <li class="last">分类:<a href="#blogs/category/os">操作系统</a></li>    </ul>
+  </div>
+</div>
+
+<div class="blog_main">
+  <div class="blog_title">
+    <h3><a href='/blog/1976797'>jsp：kindeditor乱码</a></h3>
+    
+    <div class='news_tag'><a href="#blogs/tag/kindeditor">kindeditor</a><a href="#blogs/tag/jsp">jsp</a></div>
+  </div>
+  <div class="blog_content">
+    
+原因：jsp文件编码与kindeditor下的文件编码不一致。
+解决办法：
+1、把kindeditor下的js文件统一为UTF-8格式，它默认是ASCII格式的。
+2、在jsp文件开头介入response.setCharacterEncoding(&quot;GBK&quot;);编码与request的保持一致。
+
+  </div>
+  <div class="blog_bottom">
+    <ul>
+            <li class='date'>2013-11-19 10:38</li>
+      <li>浏览 63</li>
+      <li><a href='/blog/1976797#comments'>评论(0)</a></li>
+      
+      
+      <li class="last">分类:<a href="#blogs/category/web">Web前端</a></li>    </ul>
+  </div>
+</div>
+
+<div class="blog_main">
+  <div class="blog_title">
+    <h3><a href='/blog/1976795'>jsp：kindeditor停在“正在加载,请稍候”</a></h3>
+    
+    <div class='news_tag'><a href="#blogs/tag/kidngeditor">kidngeditor</a></div>
+  </div>
+  <div class="blog_content">
+    
+An error occurred at line: 98 in the jsp file: /jsp/file_manager_json.jsp
+JSONObject cannot be resolved to a type
+出现原因：comcat里面少了JSONObject的jar。
+解决办法：把kindeditor\jsp\lib目录下的jar拷贝到tomcat目录下即可解决问题。
+
+  </div>
+  <div class="blog_bottom">
+    <ul>
+            <li class='date'>2013-11-19 10:35</li>
+      <li>浏览 25</li>
+      <li><a href='/blog/1976795#comments'>评论(0)</a></li>
+      
+      
+      <li class="last">分类:<a href="#blogs/category/web">Web前端</a></li>    </ul>
+  </div>
+</div>
+
+<div class="blog_main">
+  <div class="blog_title">
+    <h3><a href='/blog/892415'>C语言文件操作之----文件的读写</a></h3>
+    
+    <div class='news_tag'><a href="#blogs/tag/C">C</a><a href="#blogs/tag/C++">C++</a><a href="#blogs/tag/C%23">C#</a><a href="#blogs/tag/FP">FP</a><a href="#blogs/tag/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84">数据结构</a></div>
+  </div>
+  <div class="blog_content">
+    C语言文件操作之----文件的读写当文件按指定的工作方式打开以后，就可以执行对文件的读和写。下面按文件的性质分类进行操作。针对文本文件和二进制文件的不同性质，对文本文件来说，可按字符读写或按字符串读写；对二进制文件来说，可进行成块的读写或格式化的读写。1. 读写字符    C提供fgetc和fputc函数对文本文件进行字符的读写，其函数的原型存于stdio.h头文件中，格式为：  
+显示代码打印1 int fgetc(FILE *stream) 
+    fgetc( )函数从输入流的当前位置返回一个字符，并将文件指针指示器移到下一个字符处，如果已到文件尾，函数返回EOF，此时表示本次操作结 ...
+  </div>
+  <div class="blog_bottom">
+    <ul>
+            <li class='date'>2011-01-24 13:40</li>
+      <li>浏览 391</li>
+      <li><a href='/blog/892415#comments'>评论(0)</a></li>
+      
+      
+      <li class="last">分类:<a href="#blogs/category/language">编程语言</a></li>    </ul>
+  </div>
+</div>
+
+<div class="blog_main">
+  <div class="blog_title">
+    <h3><a href='/blog/859677'>C语言编码风格-布尔值与0零值的比较</a></h3>
+    
+    <div class='news_tag'><a href="#blogs/tag/C">C</a><a href="#blogs/tag/C++">C++</a><a href="#blogs/tag/C%23">C#</a><a href="#blogs/tag/VB">VB</a><a href="#blogs/tag/VC++">VC++</a></div>
+  </div>
+  <div class="blog_content">
+    不可将布尔值直接与TRUR、FALSE或者“0”、“1”进行比较。
+    根据布尔值的定义，零值为“假”（记为FALSE），任何非零值都是“真”（记为TRUE），TRUE的值究竟是多少没有统一的标准。例如：VC++将TRUE定义为TRUE，VB则将TRUE定义为-1。
+例：假设flag被定义为一个布尔变量，它与零值的比较标准if语句如下：
+if (flag)    //表示flag为真时满足条件
+if (!flag)    //表示flag为假时满足条件
+  </div>
+  <div class="blog_bottom">
+    <ul>
+            <li class='date'>2011-01-05 14:42</li>
+      <li>浏览 615</li>
+      <li><a href='/blog/859677#comments'>评论(0)</a></li>
+      
+      
+      <li class="last">分类:<a href="#blogs/category/language">编程语言</a></li>    </ul>
+  </div>
+</div>
+
+<div class="blog_main">
+  <div class="blog_title">
+    <h3><a href='/blog/851825'>关于heap(堆）和stack(栈）的问题:</a></h3>
+    
+    <div class='news_tag'><a href="#blogs/tag/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84">数据结构</a><a href="#blogs/tag/C%23">C#</a><a href="#blogs/tag/C++">C++</a><a href="#blogs/tag/C">C</a><a href="#blogs/tag/%E7%AE%97%E6%B3%95">算法</a></div>
+  </div>
+  <div class="blog_content">
+    
+
+关于heap(堆）和stack(栈）的问题:heap(堆）：是由程序员自己分配和回收，若其在程序结束时，未回收时则由操作系统来完成回收工作。stack(栈）：是由操作系统来分配和回收的。它们之间有缺点的比较：heap 一般比较灵活，且内 ...
+  </div>
+  <div class="blog_bottom">
+    <ul>
+            <li class='date'>2010-12-25 17:00</li>
+      <li>浏览 135</li>
+      <li><a href='/blog/851825#comments'>评论(0)</a></li>
+      
+      
+      <li class="last">分类:<a href="#blogs/category/language">编程语言</a></li>    </ul>
+  </div>
+</div>
+
+<div class="blog_main">
+  <div class="blog_title">
+    <h3><a href='/blog/851773'>C++位运算,看高手都是运用的灵活自如,打算从今天开始学习他!</a></h3>
+    
+    <div class='news_tag'><a href="#blogs/tag/C">C</a><a href="#blogs/tag/C++">C++</a><a href="#blogs/tag/C%23">C#</a><a href="#blogs/tag/J%23">J#</a><a href="#blogs/tag/Blog">Blog</a></div>
+  </div>
+  <div class="blog_content">
+    位运算 
+    位运算的运算分量只能是整型或字符型数据，位运算把运算对象看作是由二进位组成的位串信息，按位完成指定的运算，得到位串信息的结果。 
+位运算符有： 
+    &amp;(按位与)、|(按位或)、^(按位异或)、~ (按位� ...
+  </div>
+  <div class="blog_bottom">
+    <ul>
+            <li class='date'>2010-12-25 15:33</li>
+      <li>浏览 756</li>
+      <li><a href='/blog/851773#comments'>评论(0)</a></li>
+      
+      
+      <li class="last">分类:<a href="#blogs/category/language">编程语言</a></li>    </ul>
+  </div>
+</div>
+
+<div class="blog_main">
+  <div class="blog_title">
+    <h3><a href='/blog/849437'>C语言宏的副作用</a></h3>
+    
+    <div class='news_tag'><a href="#blogs/tag/C">C</a><a href="#blogs/tag/C++">C++</a><a href="#blogs/tag/C%23">C#</a><a href="#blogs/tag/JavaScript">JavaScript</a><a href="#blogs/tag/Apple">Apple</a></div>
+  </div>
+  <div class="blog_content">
+    3.10.4 Duplication of Side Effects
+ 
+ Many C programs define a macro min, for “minimum”, like this: 
+     #define min(X, Y)  ((X) &lt; (Y) ? (X) : (Y))
+
+ 
+When you use this macro with an argument containing a side effect, as shown here, 
+     next = min (x + y, foo (z));
+
+ 
+it expands as fo ...
+  </div>
+  <div class="blog_bottom">
+    <ul>
+            <li class='date'>2010-12-22 15:52</li>
+      <li>浏览 501</li>
+      <li><a href='/blog/849437#comments'>评论(0)</a></li>
+      
+      
+      <li class="last">分类:<a href="#blogs/category/language">编程语言</a></li>    </ul>
+  </div>
+</div>
+
+<div class="blog_main">
+  <div class="blog_title">
+    <h3><a href='/blog/704642'>std string 的常用使用 </a></h3>
+    
+    <div class='news_tag'><a href="#blogs/tag/C">C</a><a href="#blogs/tag/C++">C++</a><a href="#blogs/tag/C%23">C#</a><a href="#blogs/tag/%E7%AE%97%E6%B3%95">算法</a><a href="#blogs/tag/Blog">Blog</a></div>
+  </div>
+  <div class="blog_content">
+    用 string来代替char * 数组，使用sort排序算法来排序，用unique 函数来去重1、Define        string s1 = &quot;hello&quot;;        string s2 = &quot;world&quot;;        string s3 = s1 + &quot;,&quot; + s2 +&quot;!\n&quot;;2、append        s1 += &quot;,shanshan\n&quot;;3、Compare        if(s1 == s2)           .....        else if(s ...
+  </div>
+  <div class="blog_bottom">
+    <ul>
+            <li class='date'>2010-07-02 17:19</li>
+      <li>浏览 2332</li>
+      <li><a href='/blog/704642#comments'>评论(0)</a></li>
+      
+      
+      <li class="last">分类:<a href="#blogs/category/language">编程语言</a></li>    </ul>
+  </div>
+</div>
+
+<div class="blog_main">
+  <div class="blog_title">
+    <h3><a href='/blog/704590'>C++ using namespace std 详解</a></h3>
+    
+    <div class='news_tag'><a href="#blogs/tag/C">C</a><a href="#blogs/tag/C++">C++</a><a href="#blogs/tag/C%23">C#</a></div>
+  </div>
+  <div class="blog_content">
+    一 ：
+    &lt;iostream&gt;和&lt;iostream.h&gt;是不一样，前者没有后缀，实际上，在你的编译器include文件夹里面可以看到，二者是两个文件，打开文件就会发现，里面的代码是不一样的。     后缀为.h的头文件c++标准已经明确提出不支持了，早些的实现将标准库功能定义在全局空间里，声明在带.h后缀的头文件里，c++标准为了和C区别开，也为了正确使用命名空间，规定头文件不使用后缀.h。     因此，当使用&lt;iostream.h&gt;时，相当于在c中调用库函数，使用的是全局命名空间，也就是早期的c++实现；当使用&lt;iostream&gt;的时候 ...
+  </div>
+  <div class="blog_bottom">
+    <ul>
+            <li class='date'>2010-07-02 16:38</li>
+      <li>浏览 329</li>
+      <li><a href='/blog/704590#comments'>评论(0)</a></li>
+      
+      
+      <li class="last">分类:<a href="#blogs/category/language">编程语言</a></li>    </ul>
+  </div>
+</div>
+
+<div class="blog_main">
+  <div class="blog_title">
+    <h3><a href='/blog/703274'>快速排序</a></h3>
+    
+    <div class='news_tag'><a href="#blogs/tag/Access">Access</a><a href="#blogs/tag/C">C</a><a href="#blogs/tag/C++">C++</a><a href="#blogs/tag/C%23">C#</a></div>
+  </div>
+  <div class="blog_content">
+    /* file name: sort_qk.c */
+/* 快速排序 */
+
+#include &lt;stdio.h&gt;
+void quick_sort(int[], int, int, int);
+void main()
+{
+  int data[20];
+  int size = 0, i;
+  /* 要求输入数据直到输入数据为零 */
+  printf(&quot;\nPlease enter number to sort ( enter 0 when end ):\n&quot;);
+  printf(&quot;Number : &quot;);
+  do
+  {
+ ...
+  </div>
+  <div class="blog_bottom">
+    <ul>
+            <li class='date'>2010-07-01 10:55</li>
+      <li>浏览 168</li>
+      <li><a href='/blog/703274#comments'>评论(0)</a></li>
+      
+      
+      <li class="last">分类:<a href="#blogs/category/language">编程语言</a></li>    </ul>
+  </div>
+</div>
+
+
+
+
+
+
+        </div>
+
+        <div id="local">
+          <div class="local_top"></div>
+          <div id="blog_owner">
+  <div id="blog_owner_logo"><a href='http://null-386.iteye.com'><img alt="null_386的博客" class="logo" src="#images/user-logo.gif?1324994303" title="null_386的博客: 50" /></a></div>
+  <div id="blog_owner_name">null_386</div>
+</div>
+
+          <div id="blog_actions">
+            <ul>
+              <li>浏览: 5375 次</li>
+              <li>性别: <img alt="Icon_minigender_1" src="#images/icon_minigender_1.gif?1324994303" title="男" /></li>
+              <li>来自: 深圳</li>
+              <li><img src='/images/status/online.gif'/></li>
+              
+            </ul>
+          </div>
+          <div id="user_visits" class="clearfix">
+            <h5>最近访客 <span style='font-weight:normal;font-size:12px;padding-left:30px;'><a href="/blog/user_visits">更多访客&gt;&gt;</a></span></h5>
+            
+              <div class="user_visit">
+                <div class="logo"><a href='http://dylinshi126.iteye.com' target='_blank'><img alt="dylinshi126的博客" class="logo" src="#images/user-logo-thumb.gif?1324994303" title="dylinshi126的博客: " /></a></div>
+                <div class="left"><a href='http://dylinshi126.iteye.com' target='_blank' title='dylinshi126'>dylinshi126</a></div>
+              </div>
+            
+              <div class="user_visit">
+                <div class="logo"><a href='http://deng5765.iteye.com' target='_blank'><img alt="心若水寒的博客" class="logo" src="#images/user-logo-thumb.gif?1324994303" title="心若水寒的博客: " /></a></div>
+                <div class="left"><a href='http://deng5765.iteye.com' target='_blank' title='心若水寒'>心若水寒</a></div>
+              </div>
+            
+              <div class="user_visit">
+                <div class="logo"><a href='http://xudidi.iteye.com' target='_blank'><img alt="xudidi的博客" class="logo" src="#images/user-logo-thumb.gif?1324994303" title="xudidi的博客: " /></a></div>
+                <div class="left"><a href='http://xudidi.iteye.com' target='_blank' title='xudidi'>xudidi</a></div>
+              </div>
+            
+          </div>
+
+          
+
+                      <div id="blog_menu">
+              <h5>文章分类</h5>
+              <ul>
+                <li><a href="/">全部博客 (13)</a></li>
+                
+              </ul>
+            </div>
+            <div id='month_blogs'>
+              <h5>社区版块</h5>
+              <ul>
+                <li><a href="/blog/news">我的资讯</a> (0)</li>
+                <li>
+                  <a href="/blog/post">我的论坛</a> (0)
+                </li>
+                <li><a href="/blog/answered_problems">我的问答</a> (0)</li>
+              </ul>
+            </div>
+            <div id="month_blogs">
+              <h5>存档分类</h5>
+              <ul>
+                
+                  <li><a href="/blog/monthblog/2014-02">2014-02</a> (1)</li>
+                
+                  <li><a href="/blog/monthblog/2013-12">2013-12</a> (2)</li>
+                
+                  <li><a href="/blog/monthblog/2013-11">2013-11</a> (2)</li>
+                
+                <li><a href="/blog/monthblog_more">更多存档...</a></li>
+              </ul>
+            </div>
+            
+            
+
+            <div id="guest_books">
+              <h5>最新评论</h5>
+              <ul>
+                
+              </ul>
+            </div>
+
+            <div class="local_bottom"></div>
+          
+        </div>
+      </div>
+
+      <div id="footer" class="clearfix">
+        <div id="copyright">
+          <hr/>
+          声明：
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+  document.write("<img src='http://stat.iteye.com/?url="+ encodeURIComponent(document.location.href) + "&referrer=" + encodeURIComponent(document.referrer) + "&user_id=' width='0' height='0' />");
+</script>
+
+<script src="http://csdnimg.cn/pubfooter/js/tracking.js?version=20130923164150" type="text/javascript"></script>
+
+    
+    
+  </body>
+</html>
