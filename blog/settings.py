@@ -14,6 +14,15 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+import ConfigParser as CP
+configPath = os.path.dirname(__file__) + "/psw.cfg"
+config = CP.ConfigParser()
+with open(configPath, 'r') as cfgfile:
+	config.readfp(cfgfile)
+	user = config.get("info",'user')
+	psw = config.get("info",'psw')
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.

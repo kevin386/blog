@@ -1,2 +1,4 @@
 #ignore .pyc
 *.pyc
+#ignore password config file
+psw.cfg
