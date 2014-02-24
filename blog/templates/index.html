@@ -56,8 +56,8 @@
                     </form>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                <li><a href="/login">登录</a></li>
-                <li><a href="/login">注册</a></li>
+                <li><a href="#">登录</a></li>
+                <li><a href="#">注册</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
@@ -65,70 +65,12 @@
         <div id="page">
             <div id="content" class="clearfix">
                 <div id="main">
-                <div class="blog_main_title">
-                <!-- <a href="/rss" target="_blank" style="float:right; margin-left:10px;"><img alt="Rss" src="../static/images/rss.png?1324994303" /></a> -->
-                <span>文章列表</span> 
-                <div id="fd"></div>  
-                </div>
-
-
-                <div class="blog_main">
-                    <div class="blog_title">
-                        <h3><a href='/blog/2018418'>修改mysql数据库编码的python脚本</a></h3>
-                        <div class='news_tag'><a href="#blogs/tag/python">python</a><a href="#blogs/tag/mysql">mysql</a>&nbsp;</div>
-                    </div>
-                    <div class="blog_content">
-#-*- coding:utf8 -*-
-#统一数据库内容所有表项的编码
-import MySQLdb
-
-host = &quot;localhost&quot;
-passwd = &quot;xxxx&quot;
-user = &quot;xxx&quot;
-dbname = &quot;xxx&quot;
-
-db = MySQLdb.connect(host=host, user=user, passwd=passwd, db=dbname)
-cursor = db.cursor()
-
-cursor.execute(&quot;ALTER DATABASE `%s ...
-                    </div>
-                    <div class="blog_bottom">
-                        <ul>
-                            <li class='date'>前天</li>
-                            <li>浏览 19</li>
-                            <li><a href='/blog/2018418#comments'>评论(0)</a></li>
-                            <li class="last">分类:<a href="#blogs/category/database">数据库</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="blog_main">
-                    <div class="blog_title">
-                        <h3><a href='/blog/1995173'>CentOS6.2 final x86_64 vsftpd 配置</a></h3>
-                        <div class='news_tag'><a href="#blogs/tag/CentOS">CentOS</a></div>
-                    </div>
-                    <div class="blog_content">
-环境：CentOS6.2 final x86_64
-具体按照一步一步配置的：http://blog.csdn.net/xiao2004/article/details/6562440
-配置完后开启vsftpd
-#service vsftpd start
-本机安装ftp客户端。
-#ftp localhost
-输入密码后提示530 Login incorrect
-原因：/etc/pam.d/vsftpd 文件配置有误，博主没有写清楚下面两行增加的位置
-auth    sufficient      /lib/security/pam_userdb.so     db=/etc/v ...
-                    </div>
-                    <div class="blog_bottom">
-                        <ul>
-                            <li class='date'>2013-12-25 10:41</li>
-                            <li>浏览 17</li>
-                            <li><a href='/blog/1995173#comments'>评论(0)</a></li>
-                            <li class="last">分类:<a href="#blogs/category/os">操作系统</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-
+					<div class="blog_main_title">
+					<!-- <a href="/rss" target="_blank" style="float:right; margin-left:10px;"><img alt="Rss" src="../static/images/rss.png?1324994303" /></a> -->
+					<span>文章列表</span> 
+					<div id="fd"></div>  
+					</div>
+					{% include "article/blog_list_item.html" %}	
                 </div>
 
                 <div id="local">

@@ -1,0 +1,31 @@
+{% if articles %}
+{% for article in articles %}
+
+<div class="blog_main">
+	<div class="blog_title">
+		<h3><a href='{{ article.href }}'>{{ article.title }}</a></h3>
+		<div class='news_tag'>
+		{% for tag in article.tags %}
+		<a href="{{ tag.href }}">{{ tag.content }}</a>
+		{% endfor %}
+		&nbsp;</div>
+	</div>
+	<div class="blog_content">
+		{% if article.content %}
+		{{ article.content | safe }}
+		{% endif %}
+	</div>
+	<div class="blog_bottom">
+		<ul>
+			<li class='date'>
+			{{ article.create_time }}
+			</li>
+			<li>{{ article.view_times }}</li>
+			<li><a href='{{ article.comment.href }}'>评论({{ article.comment.count }})</a></li>
+			<li class="last">分类:<a href="{{ article.category.href }}">{{ article.category.content }}</a></li>
+		</ul>
+	</div>
+</div>
+
+{% endfor %}
+{% endblock %}
