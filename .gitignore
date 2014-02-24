@@ -2,3 +2,5 @@
 *.pyc
 #ignore password config file
 psw.cfg
+#ignore south file
+blog/migrations/

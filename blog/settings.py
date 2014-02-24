@@ -16,21 +16,24 @@ MANAGERS = ADMINS
 
 import ConfigParser as CP
 configPath = os.path.dirname(__file__) + "/psw.cfg"
+print configPath
 config = CP.ConfigParser()
 with open(configPath, 'r') as cfgfile:
 	config.readfp(cfgfile)
-	user = config.get("info",'user')
-	psw = config.get("info",'psw')
+	user = config.get("dbinfo",'user')
+	psw = config.get("dbinfo",'psw')
+	host = config.get("dbinfo",'host')
+	port = config.get("dbinfo",'port')
 
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'blog',                      # Or path to database file if using sqlite3.
-        'USER': 'djcms',                      # Not used with sqlite3.
-        'PASSWORD': '1oW.W.djcms',                  # Not used with sqlite3.
-        'HOST': '50.93.201.104',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '3306',                      # Set to empty string for default. Not used with sqlite3.
+        'USER': user,                      # Not used with sqlite3.
+        'PASSWORD': psw,                  # Not used with sqlite3.
+        'HOST': host,                      # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': port,                      # Set to empty string for default. Not used with sqlite3.
     }
 }
 
