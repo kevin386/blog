@@ -1,0 +1,29 @@
+#-*- coding:utf-8 -*-
+from django.shortcuts import render_to_response
+from blog.models import Article,Tag,Comment
+from blog.modules.articleViews import articleView,tagsView,categoryView,commentView
+
+def home(request):
+	artObjs = Article.objects.all()
+	comObjs = Comment.objects.all()
+	articles = []
+	for obj in artObjs:
+		print obj
+		print obj.title
+		print obj.content
+		print obj.pub_date
+		print obj.vist_times
+		tags = []
+		for t in obj.tags.all():
+			tag = Tag.objects.get(id=t.id)
+			print "tag: "
+			print dir(tag)
+			print "tag.id: "
+			print type(tag.id)
+			print dir(tag.id)
+			tags.append(tagsView("tags/"+str(tag.id),tag.name))
+		coms = []
+		cat = categoryView("cat/"+obj.category.id,obj.category.name)
+		art = articleView(obj.title,tags,obj.content,obj.pub_date,obj.vist_times,coms,cat)
+		articles.append(art)
+	return render_to_response("index.html",locals())

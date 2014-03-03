@@ -16,7 +16,6 @@ MANAGERS = ADMINS
 
 import ConfigParser as CP
 configPath = os.path.dirname(__file__) + "/psw.cfg"
-print configPath
 config = CP.ConfigParser()
 with open(configPath, 'r') as cfgfile:
 	config.readfp(cfgfile)

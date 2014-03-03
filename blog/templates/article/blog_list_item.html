@@ -3,29 +3,29 @@
 
 <div class="blog_main">
 	<div class="blog_title">
-		<h3><a href='{{ article.href }}'>{{ article.title }}</a></h3>
+		<h3><a href='{{ article.title.href }}'>{{ article.title.name }}</a></h3>
 		<div class='news_tag'>
 		{% for tag in article.tags %}
-		<a href="{{ tag.href }}">{{ tag.content }}</a>
+		<a href="{{ tag.href }}">{{ tag.name }}</a>
 		{% endfor %}
 		&nbsp;</div>
 	</div>
 	<div class="blog_content">
-		{% if article.content %}
-		{{ article.content | safe }}
+		{% if article.cont_trun %}
+		{{ article.cont_trun | safe }}
 		{% endif %}
 	</div>
 	<div class="blog_bottom">
 		<ul>
 			<li class='date'>
-			{{ article.create_time }}
+			{{ article.pub_date }}
 			</li>
-			<li>{{ article.view_times }}</li>
-			<li><a href='{{ article.comment.href }}'>评论({{ article.comment.count }})</a></li>
-			<li class="last">分类:<a href="{{ article.category.href }}">{{ article.category.content }}</a></li>
+			<li>浏览 {{ article.vist_times }}</li>
+			<li><a href='{{ article.comment.href }}'>评论({{ article.comCount}})</a></li>
+			<li class="last">分类:<a href="{{ article.category.href }}">{{ article.category.name }}</a></li>
 		</ul>
 	</div>
 </div>
 
 {% endfor %}
-{% endblock %}
+{% endif %}
