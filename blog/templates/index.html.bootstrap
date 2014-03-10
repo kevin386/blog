@@ -1,0 +1,153 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" dir="ltr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>我的博客</title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="null_386 50" />
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../static/dist/css/bootstrap.min.css">
+
+        <link rel="shortcut icon" href="../static/images/favicon.ico" type="image/x-icon" />
+        <link href="../static/css/blog.css" media="screen" rel="stylesheet" type="text/css" />
+        <link href="../static/css/blue.css" media="screen" rel="stylesheet" type="text/css" />
+        <script src="../static/js/application.js" type="text/javascript"></script>
+
+        <style type="text/css">
+            body { 
+                padding-top: 50px; 
+            }
+            .navbar-inner {
+                background-color: #108AC6;
+            }
+        </style>
+
+    </head>
+    <body>
+        
+        <!-- <nav class="navbar navbar-default navbar-fixed-top" role="navigation"> -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">我的博客</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">首页</a></li>
+                    <li><a href="#">留言</a></li>
+                    <li><a href="#">关于我</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-center">
+                    <form class="navbar-form navbar-center" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="搜索">
+                        </div>
+                        <button type="submit" class="btn btn-default">搜索</button>
+                    </form>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">登录</a></li>
+                <li><a href="#">注册</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+
+        <div id="page">
+            <div id="content" class="clearfix">
+                <div id="main">
+					<div class="blog_main_title">
+					<!-- <a href="/rss" target="_blank" style="float:right; margin-left:10px;"><img alt="Rss" src="../static/images/rss.png?1324994303" /></a> -->
+					<span>文章列表</span> 
+					<div id="fd"></div>  
+					</div>
+					{% include "article/blog_list_item.html" %}	
+                </div>
+
+                <div id="local">
+                    <div class="local_top"></div>
+                    <div id="blog_owner">
+                        <div id="blog_owner_logo"><a href='http://null-386.iteye.com'><img alt="null_386的博客" class="logo" src="../static/images/user-logo.gif" title="null_386的博客: 50" /></a></div>
+                        <div id="blog_owner_name">null_386</div>
+                    </div>
+
+                    <div id="blog_actions">
+                        <ul>
+                            <li>浏览: 5375 次</li>
+                            <li>性别: <img alt="Icon_minigender_1" src="../static/images/icon_minigender_1.gif" title="男" /></li>
+                            <li>来自: 深圳</li>
+                            <li><img src='../static/images/status/online.gif'/></li>
+                        </ul>
+                    </div>
+                    <!-- <div id="user_visits" class="clearfix">
+                        <h5>最近访客 <span style='font-weight:normal;font-size:12px;padding-left:30px;'><a href="/blog/user_visits">更多访客&gt;&gt;</a></span></h5>
+
+                        <div class="user_visit">
+                            <div class="logo"><a href='http://dylinshi126.iteye.com' target='_blank'><img alt="dylinshi126的博客" class="logo" src="../static/images/user-logo-thumb.gif" title="dylinshi126的博客: " /></a></div>
+                            <div class="left"><a href='http://dylinshi126.iteye.com' target='_blank' title='dylinshi126'>dylinshi126</a></div>
+                        </div>
+
+                        <div class="user_visit">
+                            <div class="logo"><a href='http://deng5765.iteye.com' target='_blank'><img alt="心若水寒的博客" class="logo" src="../static/images/user-logo-thumb.gif" title="心若水寒的博客: " /></a></div>
+                            <div class="left"><a href='http://deng5765.iteye.com' target='_blank' title='心若水寒'>心若水寒</a></div>
+                        </div>
+
+                        <div class="user_visit">
+                            <div class="logo"><a href='http://xudidi.iteye.com' target='_blank'><img alt="xudidi的博客" class="logo" src="../static/images/user-logo-thumb.gif" title="xudidi的博客: " /></a></div>
+                            <div class="left"><a href='http://xudidi.iteye.com' target='_blank' title='xudidi'>xudidi</a></div>
+                        </div>
+
+                    </div> -->
+
+                    <div id="blog_menu">
+                        <h5>文章分类</h5>
+                        <ul>
+							<li><a href="/">全部博客 (13)</a></li>
+							{% for cat in categorys %}
+							<li><a href="{{ cat.href }}">{{ cat.name }}</a></li>
+							{% endfor %}
+                        </ul>
+                    </div>
+
+                    <div id="month_blogs">
+                        <h5>存档分类</h5>
+                        <ul>
+                            <li><a href="/blog/monthblog/2014-02">2014-02</a> (1)</li>
+                            <li><a href="/blog/monthblog/2013-12">2013-12</a> (2)</li>
+                            <li><a href="/blog/monthblog/2013-11">2013-11</a> (2)</li>
+                            <li><a href="/blog/monthblog_more">更多存档...</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="guest_books">
+                    <h5>最新评论</h5>
+                    <ul>
+                    </ul>
+                    </div>
+                    <div class="local_bottom"></div>
+                </div>
+            </div>
+
+            <div id="footer" class="clearfix">
+                <div id="copyright">
+                <hr/>
+                声明：
+                </div>
+            </div>
+        </div> 
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="../static/jquery/1.10.2/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="../static/dist/js/bootstrap.min.js"></script>
+    </body>
+</html>

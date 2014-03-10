@@ -24,7 +24,6 @@ with open(configPath, 'r') as cfgfile:
 	host = config.get("dbinfo",'host')
 	port = config.get("dbinfo",'port')
 
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
