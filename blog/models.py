@@ -22,7 +22,7 @@ class Article(models.Model):
 	tags = models.ManyToManyField(Tag, verbose_name="标签")
 	pub_date = models.DateTimeField("发布时间",auto_now=False, auto_now_add=True)
 	last_date = models.DateTimeField("最近修改时间",auto_now=True, auto_now_add=False)
-	vist_times = models.DecimalField("浏览量", max_digits=5,decimal_places=0)
+	vist_times = models.DecimalField("浏览量", null=True, blank=True,max_digits=5,decimal_places=0)
 	def __unicode__(self):
 		return self.title
 		
